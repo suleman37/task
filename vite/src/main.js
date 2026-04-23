@@ -1,3 +1,4 @@
+import './style.css'
 import logo from './assets/2d06b1c7a47f544f9a701cae5d9268b71bd7ccc6.png'
 import html from './index.html?raw'
 
