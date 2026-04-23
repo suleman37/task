@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
-
-<body class="text-white">
-    <main class="w-full">
-        <header class="flex w-full flex-wrap items-center justify-between gap-4 border border-[#121212] bg-black">
-            <div class="flex min-w-0 items-center gap-6 sm:gap-10">
-                <div style="margin-left: 16px;">
-                    <img src="__LOGO__" alt="Logo" style="height:100%; width:100px; display:block;" />
+<body class="bg-[#05030d] text-white min-h-screen m-0 font-sans">
+    <div class="flex min-h-screen justify-center items-center py-8">
+        <div class="w-full max-w-[1400px] flex flex-col items-center px-8">
+            <div class="relative mb-6 flex w-full items-center justify-center">
+                <button type="button" aria-label="Previous slide" class="absolute left-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center text-6xl font-black leading-none text-[#ff3a31] md:text-7xl">
+                    &larr;
+                </button>
+                <button type="button" aria-label="Next slide" class="absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center text-6xl font-black leading-none text-[#ff3a31] md:text-7xl">
+                    &rarr;
+                </button>
+                <div class="flex justify-center items-end gap-5 flex-wrap md:gap-8">
+                <div class="game-card relative h-[340px] w-[210px] overflow-hidden bg-[#181818] shadow-[0_18px_50px_rgba(0,0,0,0.45)] md:h-[430px] md:w-[270px]">
+                    <img src="__LEFT_CARD__" alt="Invasion Aliens" class="h-full w-full scale-[1.18] object-cover object-[52%_18%] brightness-[0.78] contrast-110 saturate-110" />
+                    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(12,8,20,0.08)_38%,rgba(8,6,16,0.84)_100%)]"></div>
+                    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(65,110,255,0.14),transparent_50%,rgba(255,64,64,0.22))]"></div>
+                    <div class="absolute bottom-6 left-4 right-4 md:bottom-8 md:left-5 md:right-5">
+                        <h2 class="card-title max-w-[9.5rem] text-[28px] text-white md:max-w-[11rem] md:text-[40px]">Invation Aliens</h2>
+                        <button class="card-cta mt-4 inline-flex items-center gap-2 rounded-sm bg-[#ff2b22] px-4 py-2.5 text-[11px] font-black uppercase tracking-tight text-white shadow-[0_10px_24px_rgba(255,43,34,0.35)] md:mt-5 md:px-5 md:py-3 md:text-[13px]">
+                            <span>Play Now</span>
+                            <span>&rarr;</span>
+                        </button>
+                    </div>
                 </div>
-
-                <nav class="hidden sm:block">
-                    <ul
-                        class="flex items-center gap-8 text-[11px] font-medium uppercase tracking-[0.2em] text-white/75">
-                        <li>
-                            <p class="relative block py-4 text-white">
-                                Home
-                                <span class="absolute inset-x-0 bottom-0 border-b-[3px] border-[#ff2b2b]"></span>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="block py-4">Games</p>
-                        </li>
-                        <li>
-                            <p class="block py-4">Help</p>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="game-card relative h-[390px] w-[390px] overflow-hidden bg-[#1a1011] shadow-[0_24px_60px_rgba(0,0,0,0.5)] md:h-[520px] md:w-[520px]">
+                    <img src="__CENTER_CARD__" alt="Legend of Dragon" class="h-full w-full scale-[1.08] object-cover object-[center_24%] brightness-[1.02] contrast-105 saturate-105" />
+                    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,250,240,0.03)_18%,rgba(24,10,8,0.05)_42%,rgba(16,8,8,0.58)_100%)]"></div>
+                    <div class="absolute inset-x-0 bottom-0 h-28 bg-[radial-gradient(circle_at_24%_100%,rgba(255,89,46,0.55),transparent_50%)] md:h-36"></div>
+                    <div class="absolute bottom-7 left-5 right-5 flex flex-col items-start md:bottom-10 md:left-7 md:right-7">
+                        <h2 class="card-title max-w-[13rem] text-[34px] text-white md:max-w-[16rem] md:text-[40px]">Legend of Dragon</h2>
+                        <button class="card-cta mt-4 inline-flex items-center gap-2 rounded-sm bg-[#ff2b22] px-4 py-2.5 text-[11px] font-black uppercase tracking-tight text-white shadow-[0_10px_24px_rgba(255,43,34,0.35)] md:mt-6 md:px-6 md:py-3 md:text-[13px]">
+                            <span>Play Now</span>
+                            <span>&rarr;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="game-card relative h-[340px] w-[210px] overflow-hidden bg-[#181818] shadow-[0_18px_50px_rgba(0,0,0,0.45)] md:h-[430px] md:w-[270px]">
+                    <img src="__RIGHT_CARD__" alt="Monster Cyber XX6" class="h-full w-full scale-[1.15] object-cover object-[56%_18%] brightness-[0.86] contrast-110 saturate-110" />
+                    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(12,8,20,0.08)_38%,rgba(8,6,16,0.84)_100%)]"></div>
+                    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(45,95,255,0.08),transparent_52%,rgba(255,64,64,0.22))]"></div>
+                    <div class="absolute bottom-6 left-4 right-4 text-right md:bottom-8 md:left-5 md:right-5">
+                        <h2 class="card-title ml-auto max-w-[10rem] text-[28px] text-white md:max-w-[12rem] md:text-[40px]">Monster Cyber XX6</h2>
+                        <button class="card-cta mt-4 inline-flex items-center gap-2 rounded-sm bg-[#ff2b22] px-4 py-2.5 text-[11px] font-black uppercase tracking-tight text-white shadow-[0_10px_24px_rgba(255,43,34,0.35)] md:mt-5 md:px-5 md:py-3 md:text-[13px]">
+                            <span>Play Now</span>
+                            <span>&rarr;</span>
+                        </button>
+                    </div>
+                </div>
+                </div>
             </div>
-
-            <div class="ml-auto flex items-center gap-2 sm:gap-3">
-                <button
-                    class="grid h-8 w-8 place-items-center rounded-full border border-white/10 text-[10px] font-semibold uppercase tracking-[0.16em] transition hover:border-white/30">
-                    <img src="assets/Frame.png" alt="Logo" style="height:100%; width:32px; display:block;" />
-                </button>
-
-                <button
-                    class="grid h-8 w-8 place-items-center rounded-full border border-white/10 text-[10px] font-semibold uppercase tracking-[0.16em] transition hover:border-white/30">
-                    <img src="assets/Frame (1).png" alt="Logo" style="height:100%; width:32px; display:block;" />
-                </button>
-
-
-                <button
-                    class="min-w-[96px] rounded-full border border-white/25 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white transition hover:border-white/45 sm:min-w-[104px] sm:px-6">
-                    Login
-                </button>
-
-                <button class="bg-red-500 p-4 min-w-[120px]">
-                    Register
-                </button>
-
-
+            <div class="mt-2 flex justify-center gap-3">
+                <span class="inline-block h-5 w-5 rounded-full border-2 border-[#ff3a31] bg-[#ff3a31]"></span>
+                <span class="inline-block h-4 w-4 rounded-full bg-gray-600"></span>
+                <span class="inline-block h-4 w-4 rounded-full bg-gray-600"></span>
+                <span class="inline-block h-4 w-4 rounded-full bg-gray-600"></span>
             </div>
-        </header>
-    </main>
-    <div class="hero flex flex-col items-center justify-center px-8 sm:px-24 md:px-40 lg:px-60">
-        <div class="bg-purple-600 rounded-[50px] px-6 py-3 inline-block text-white text-lg font-semibold mb-8">
-            where play to earn meets gamification
         </div>
-        <h1 class="font-bold text-center" style="font-size:100px;">
-            Enjoy Umlimate Gaming Experience
-        </h1>
-        <div style="margin-left: 16px; display: flex; flex-direction: row; gap: 30px; margin-top: 200px;">
-            <img src="__LOGO__" alt="Logo" style="height:100%; width:160px; display:block;" />
-            <img src="__LOGO__" alt="Logo" style="height:100%; width:160px; display:block;" />
-            <img src="__LOGO__" alt="Logo" style="height:100%; width:160px; display:block;" />
-            <img src="__LOGO__" alt="Logo" style="height:100%; width:160px; display:block;" />
-            <img src="__LOGO__" alt="Logo" style="height:100%; width:160px; display:block;" />
-        </div>
+    </div>
 </body>
-
 </html>
