@@ -1,6 +1,6 @@
-.hero{
-  background-image: url(./assets/hero_image.jpg);
+.hero {
   height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./assets/hero_image.jpg);
   background-size: cover;
   background-position: start;
   background-repeat: no-repeat;
